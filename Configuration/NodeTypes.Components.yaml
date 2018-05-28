@@ -1,0 +1,65 @@
+##
+# Content node types
+
+##
+# A "Carousel" content element that renders "Image" child nodes into a JavaScript based slideshow
+#
+'AR.AndreasRieger:Jumbotron':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    label: 'Jumbotron'
+    group: 'general'
+    icon: 'icon-header'
+    inlineEditable: TRUE
+  properties:
+    ui:
+      reloadIfChanged: TRUE
+    'headline':
+      type: string
+      defaultValue: 'Headline'
+      ui:
+        label: 'Headline'
+        relaodIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/TextFieldEditor'
+    'copy':
+      type: string
+      defaultValue: 'Copy'
+      ui:
+        label: 'Copy'
+        relaodIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/TextFieldEditor'
+
+##
+# A panel to frame some content
+#
+'AR.AndreasRieger:Panel':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    group: structure
+    label: 'Panel'
+    icon: icon-columns
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        spacing:
+          label: 'Spacing'
+          position: 5
+  childNodes:
+    column0:
+      type: 'Neos.Neos:ContentCollection'
+  properties:
+    'topbottomspace':
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: 'Wider spaceing'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'spacing'
+          editor: 'Neos.Neos/Inspector/Editors/BooleanEditor'

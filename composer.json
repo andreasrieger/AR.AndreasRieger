@@ -1,0 +1,22 @@
+{
+    "description": "",
+    "type": "neos-site",
+    "require": {
+        "neos/neos": "*",
+        "neos/nodetypes": "*"
+    },
+    "suggest": {
+        "neos/seo": "*"
+    },
+    "name": "ar/andreasrieger",
+    "autoload": {
+        "psr-4": {
+            "AR\\AndreasRieger\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "AR.AndreasRieger"
+        }
+    }
+}
