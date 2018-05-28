@@ -1,0 +1,19 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "description": "Stylesheets w/ Bootstrap and FontAwesome",
+  "main": "index.js",
+  "scripts": {
+    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 Scss/custom.scss Styles/bootstrap.css"
+  },
+  "author": "Andreas Rieger",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free": "^5.1.0-4",
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.9.0",
+    "popper.js": "^1.14.3"
+  }
+}

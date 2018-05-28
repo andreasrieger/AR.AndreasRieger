@@ -1,0 +1,111 @@
+// Custom overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+$fa-font-path: "../Fonts";
+
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "node_modules/@fortawesome/fontawesome-free/scss/fa-brands";
+@import "node_modules/@fortawesome/fontawesome-free/scss/fa-regular";
+@import "node_modules/@fortawesome/fontawesome-free/scss/fa-solid";
+
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+
+ .teaser {
+ 	background-image: url("../Images/logo.svg");
+ 	background-size: contain;
+ 	background-repeat: no-repeat;
+ }
+
+ .jumbotron {
+ 	background: rgba(238,238,238,0.8);
+ }
+
+ .jumbotron .container {
+ 	margin-top:50px;
+ }
+
+ .typo3-neos-alignment-center img {
+ 	display: block;
+ 	margin: 0 auto;
+ }
+
+ .typo3-neos-alignment-right img {
+   float: right !important;
+ }
+
+ .typo3-neos-alignment-right:after {
+ 	content: ":P";
+ 	clear: both;
+ }
+
+ a {
+ 	color: #ccc
+ }
+
+ .topbottomspace {
+ 	margin-top:50px;
+ }
+
+ /* CUSTOMIZE THE NAVBAR
+ -------------------------------------------------- */
+
+ /* Special class on .container surrounding .navbar, used for positioning it into place. */
+ .navbar-wrapper {
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+   z-index: 20;
+ }
+
+ /* Flip around the padding for proper display in narrow viewports */
+ .navbar-wrapper > .container {
+   padding-right: 0;
+   padding-left: 0;
+ }
+ .navbar-wrapper .navbar {
+   padding-right: 15px;
+   padding-left: 15px;
+   background: rgba(255, 255, 255, 0.7);
+ }
+ .navbar-wrapper .navbar .container {
+   width: auto;
+ }
+
+ .navbar-brand {
+ 	background-image: url("../Images/logo.svg");
+ 	background-repeat: no-repeat;
+ 	text-indent: -999px;
+ 	background-size: cover;
+ 	width: 112px;
+ }
+
+
+ /* RESPONSIVE CSS
+ -------------------------------------------------- */
+
+ @media (min-width: 768px) {
+   /* Navbar positioning foo */
+   .navbar-wrapper {
+     margin-top: 20px;
+   }
+   .navbar-wrapper .container {
+     padding-right: 15px;
+     padding-left: 15px;
+   }
+   .navbar-wrapper .navbar {
+     padding-right: 0;
+     padding-left: 0;
+   }
+
+   /* The navbar becomes detached from the top, so we round the corners */
+   .navbar-wrapper .navbar {
+     border-radius: 4px;
+   }
+ }

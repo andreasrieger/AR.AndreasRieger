@@ -1,38 +1,16 @@
 ##
 # Content node types
 
-##
-# A "Carousel" content element that renders "Image" child nodes into a JavaScript based slideshow
-#
 'AR.AndreasRieger:Jumbotron':
   superTypes:
     'Neos.Neos:Content': TRUE
+    'Neos.NodeTypes:TitleMixin': TRUE
+    'Neos.NodeTypes:TextMixin': TRUE
   ui:
     label: 'Jumbotron'
     group: 'general'
     icon: 'icon-header'
     inlineEditable: TRUE
-  properties:
-    ui:
-      reloadIfChanged: TRUE
-    'headline':
-      type: string
-      defaultValue: 'Headline'
-      ui:
-        label: 'Headline'
-        relaodIfChanged: TRUE
-        inspector:
-          group: 'settings'
-          editor: 'Neos.Neos/Inspector/Editors/TextFieldEditor'
-    'copy':
-      type: string
-      defaultValue: 'Copy'
-      ui:
-        label: 'Copy'
-        relaodIfChanged: TRUE
-        inspector:
-          group: 'settings'
-          editor: 'Neos.Neos/Inspector/Editors/TextFieldEditor'
 
 ##
 # A panel to frame some content
