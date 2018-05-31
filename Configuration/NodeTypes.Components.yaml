@@ -8,36 +8,26 @@
     'Neos.NodeTypes:TextMixin': TRUE
   ui:
     label: 'Jumbotron'
-    group: 'general'
+    group: 'twbs'
     icon: 'icon-header'
     inlineEditable: TRUE
 
 ##
 # A panel to frame some content
 #
-'AR.AndreasRieger:Panel':
+'AR.AndreasRieger:Card':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+    'Neos.NodeTypes:TitleMixin': TRUE
+    'Neos.NodeTypes:TextMixin': TRUE
+  ui:
+    group: 'twbs'
+    label: 'Card'
+    icon: icon-square
+    inlineEditable: TRUE
+
+'AR.AndreasRieger:SpecialMenu':
   superTypes:
     'Neos.Neos:Content': TRUE
   ui:
-    group: structure
-    label: 'Panel'
-    icon: icon-columns
-    inlineEditable: TRUE
-    inspector:
-      groups:
-        spacing:
-          label: 'Spacing'
-          position: 5
-  childNodes:
-    column0:
-      type: 'Neos.Neos:ContentCollection'
-  properties:
-    'topbottomspace':
-      type: boolean
-      defaultValue: FALSE
-      ui:
-        label: 'Wider spaceing'
-        reloadIfChanged: TRUE
-        inspector:
-          group: 'spacing'
-          editor: 'Neos.Neos/Inspector/Editors/BooleanEditor'
+    label: 'SpecialMenu'

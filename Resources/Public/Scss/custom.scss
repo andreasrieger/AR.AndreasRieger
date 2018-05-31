@@ -16,41 +16,32 @@ $fa-font-path: "../Fonts";
  * --------------------------------------------------
  */
 
- .teaser {
+.teaser {
  	background-image: url("../Images/logo.svg");
  	background-size: contain;
  	background-repeat: no-repeat;
- }
+}
 
- .jumbotron {
- 	background: rgba(238,238,238,0.8);
- }
+.jumbotron {
+  background: rgba(238,238,238,0.8);
+}
 
- .jumbotron .container {
- 	margin-top:50px;
- }
+// .fa-icons a {
+//   color: $body-color;
+// }
 
- .typo3-neos-alignment-center img {
- 	display: block;
- 	margin: 0 auto;
- }
+#fa-icon-xing a:hover {
+  color: #b0d400;
+}
 
- .typo3-neos-alignment-right img {
-   float: right !important;
- }
+#fa-icon-linkedin a:hover {
+  color: #0077b5;
+}
 
- .typo3-neos-alignment-right:after {
- 	content: ":P";
- 	clear: both;
- }
+#fa-icon-github a:hover {
+  color: #24292e;
+}
 
- a {
- 	color: #ccc
- }
-
- .topbottomspace {
- 	margin-top:50px;
- }
 
  /* CUSTOMIZE THE NAVBAR
  -------------------------------------------------- */

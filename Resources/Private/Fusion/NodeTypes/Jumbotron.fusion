@@ -1,7 +1,0 @@
-prototype(Site:Jumbotron) < prototype(Content) {
-	templatePath = 'resource://AR.AndreasRieger/Private/Templates/NodeTypes/Jumbotron.html'
-	columnContent = ContentCollection {
-		nodePath = 'main'
-	}
-  attributes.class = 'jumbotron'
-}

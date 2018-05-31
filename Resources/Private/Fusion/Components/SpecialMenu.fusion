@@ -1,0 +1,8 @@
+prototype(Site:SpecialMenu) < prototype(Neos.Fusion:Collection) {
+  collection = ${[1,2,3]}
+  itemRenderer = ${item * 2}
+  /* itemRenderer = Neos.Fusion:Tag {
+    tagName = 'li'
+    content = ${item}
+  } */
+}

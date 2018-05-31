@@ -1,6 +1,38 @@
 ##
 # Structuring node types
 
+'AR.AndreasRieger:Section':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+    # 'Neos.Neos:ContentCollection': TRUE
+  ui:
+    label: 'Seitenabschnitt'
+    inlineEditable: TRUE
+    group: 'structure'
+  childNodes:
+    container:
+      type: 'Neos.Neos:ContentCollection'
+  properties:
+    titleOverride:
+      type: 'string'
+    showInMenu:
+      type: 'boolean'
+      ui:
+        label: 'Show in menu'
+        group: 'general'
+    linkText:
+      type: 'string'
+      ui:
+        label: 'Linktext'
+        group: 'settings'
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []
+        'Neos.Neos/Validation/StringLengthValidator':
+          minimum: 1
+          maximum: 255
+        'Neos.Neos/Validation/RegularExpressionValidator':
+          regularExpression: '/^[a-z0-9\-]+$/i'
+
 ##
 # Adjust the "TwoColumn" node type:
 # Disable some of the layout options, override labels and set the default layout

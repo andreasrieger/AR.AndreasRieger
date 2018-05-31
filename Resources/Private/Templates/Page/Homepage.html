@@ -4,7 +4,7 @@
 <html>
 <head>
 	<f:section name="stylesheets">
-		<link rel="stylesheet" href="{f:uri.resource(path: 'Styles/bootstrap.css', package: 'AR.AndreasRieger')}" media="all" />
+		<!-- Stylesheets -->
 	</f:section>
 	<f:section name="headScripts">
 		<!-- Put your scripts inclusions for the head here, they will be included in your website by Fusion -->
@@ -12,13 +12,15 @@
 </head>
 <body>
 <f:section name="body">
+	{parts.specialMenu -> f:format.raw()}
+	{content.teaser -> f:format.raw()}
 	<div class="container">
 		{content.main -> f:format.raw()}
 	</div>
 	{parts.menu -> f:format.raw()}
 </f:section>
 <f:section name="bodyScripts">
-	<script src="{f:uri.resource(path: 'JavaScript/FontAwesome/all.js', package: 'AR.AndreasRieger')}"></script>
+	<!-- Put your scripts inclusions for the end of the body here, they will be included in your website by Fusion -->
 </f:section>
 </body>
 </html>

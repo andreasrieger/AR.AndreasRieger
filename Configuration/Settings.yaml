@@ -1,0 +1,16 @@
+# Settings.yaml
+
+# Neos:
+#   Neos:
+#     fusion:
+#       autoInclude:
+#         AR.Test: FALSE
+#         Neos.Demo: FALSE
+Neos:
+  Neos:
+    nodeTypes:
+      groups:
+        twbs:
+          position: 50
+          label: 'Twitter Bootstrap Components'
+          icon: 'icon-twitter-square'

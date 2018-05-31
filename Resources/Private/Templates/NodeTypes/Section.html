@@ -1,0 +1,8 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+
+<section{attributes -> f:format.raw()}>
+	<div class="container">
+		<neos:contentElement.editable property="titleOverride" tag="h1" />
+		{content -> f:format.raw()}
+	</div>
+</section>

@@ -1,0 +1,9 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+
+<ul id="specialmenu" class="container">
+  {item -> f:format.raw()}
+</ul>
+
+<f:section name="menuItem">
+  <li>{menuItem -> f:format.raw()}</li>
+</f:section>
