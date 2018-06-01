@@ -29,5 +29,6 @@
 'AR.AndreasRieger:SpecialMenu':
   superTypes:
     'Neos.Neos:Content': TRUE
+  abstract: TRUE
   ui:
     label: 'SpecialMenu'

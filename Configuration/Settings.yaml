@@ -1,13 +1,10 @@
 # Settings.yaml
 
-# Neos:
-#   Neos:
-#     fusion:
-#       autoInclude:
-#         AR.Test: FALSE
-#         Neos.Demo: FALSE
 Neos:
   Neos:
+    fusion:
+      autoInclude:
+        AR.AndreasRieger: true
     nodeTypes:
       groups:
         twbs:

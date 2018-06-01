@@ -1,14 +1,14 @@
 prototype(AR.AndreasRieger:Homepage) < prototype(AR.AndreasRieger:Page) {
     body {
       templatePath = 'resource://AR.AndreasRieger/Private/Templates/Page/Homepage.html'
-        // These are your content areas, you can define as many as you want, just name them and the nodePath.
-        content {
-            // The default content section
-            teaser = Neos.Neos:ContentCollection {
-                nodePath = 'teaser'
-                tagName = 'div'
-                attributes.class = 'teaser'
-            }
-        }
+      // These are your content areas, you can define as many as you want, just name them and the nodePath.
+      content {
+          // The default content section
+          teaser = Neos.Neos:ContentCollection {
+              nodePath = 'teaser'
+              tagName = 'div'
+              attributes.class = 'teaser'
+          }
+      }
     }
 }

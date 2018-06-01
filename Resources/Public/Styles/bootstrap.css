@@ -12004,7 +12004,7 @@ readers do not read off random characters that represent icons */
  -------------------------------------------------- */
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -12012,47 +12012,31 @@ readers do not read off random characters that represent icons */
 }
 
 /* Flip around the padding for proper display in narrow viewports */
-.navbar-wrapper > .container {
-  padding-right: 0;
-  padding-left: 0;
+#specialmenu {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-.navbar-wrapper .navbar {
-  padding-right: 15px;
-  padding-left: 15px;
-  background: rgba(255, 255, 255, 0.7);
-}
-
-.navbar-wrapper .navbar .container {
-  width: auto;
-}
-
-.navbar-brand {
+.navbar {
   background-image: url("../Images/logo.svg");
   background-repeat: no-repeat;
-  text-indent: -999px;
-  background-size: cover;
-  width: 112px;
+  background-size: contain;
 }
 
 /* RESPONSIVE CSS
  -------------------------------------------------- */
-@media (min-width: 768px) {
-  /* Navbar positioning foo */
+@media (min-width: 576px) {
   .navbar-wrapper {
     margin-top: 20px;
   }
-  .navbar-wrapper .container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  .navbar-wrapper .navbar {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  /* The navbar becomes detached from the top, so we round the corners */
   .navbar-wrapper .navbar {
     border-radius: 4px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-wrapper .container {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 

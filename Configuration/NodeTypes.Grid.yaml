@@ -4,27 +4,82 @@
 'AR.AndreasRieger:Section':
   superTypes:
     'Neos.Neos:Content': TRUE
-    # 'Neos.Neos:ContentCollection': TRUE
   ui:
     label: 'Seitenabschnitt'
+    icon: 'icon-bars'
     inlineEditable: TRUE
     group: 'structure'
+    inspector:
+      tabs:
+        settings:
+          label: 'Settings'
+          icon: 'icon-sliders'
+      groups:
+        basic:
+          label: 'Basic settings'
+          icon: 'icon-wrench'
+          position: 1
+        advanced:
+          label: 'Advanced settings'
+          icon: 'icon-screwdriver'
   childNodes:
-    container:
+    sectionContent:
       type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': true
+          'AR.AndreasRieger:Section': FALSE
   properties:
-    titleOverride:
-      type: 'string'
+    title:
+      type: string
+      defaultValue: 'Seitenabschnitt'
+      ui:
+        label: 'Abschnittstitel'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'basic'
+          position: 10
+          editorOptions:
+            placeholder: 'Abschnittstitel eingeben'
+    showTitle:
+      type: boolean
+      defaultValue: TRUE
+      ui:
+        label: 'Abschnittstitel ausgeben'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'basic'
+          position: 20
     showInMenu:
-      type: 'boolean'
+      type: boolean
+      defaultValue: TRUE
       ui:
-        label: 'Show in menu'
-        group: 'general'
-    linkText:
-      type: 'string'
+        label: 'Titel im Menü ausgeben'
+        inspector:
+          group: 'basic'
+          position: 30
+    menuLinkText:
+      type: string
+      defaultValue: ''
       ui:
-        label: 'Linktext'
-        group: 'settings'
+        label: 'Alternativer Menü-Linktext'
+        help:
+          message: 'Dieser Linktext steht im Menü'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'basic'
+          position: 40
+          editorOptions:
+            placeholder: 'Menü-Linktext eingeben'
+    sectionId:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Abschnitt ID (optional)'
+        reloadIfChanged: true
+        inspector:
+          group: 'advanced'
+          position: 50
       validation:
         'Neos.Neos/Validation/NotEmptyValidator': []
         'Neos.Neos/Validation/StringLengthValidator':

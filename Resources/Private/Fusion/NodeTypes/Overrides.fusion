@@ -17,5 +17,5 @@ prototype(Neos.NodeTypes:MultiColumn) {
 # Adjust "MultiColumnItem" element to Twitter bootstrap CSS classes
 #
 prototype(Neos.NodeTypes:MultiColumnItem) {
-    attributes.class = ${'col-lg-' + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index]}
+    attributes.class = ${'col-md-' + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index]}
 }

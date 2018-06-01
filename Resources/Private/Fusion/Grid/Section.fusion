@@ -1,5 +1,11 @@
-prototype(Site:Section) < prototype(Content) {
+prototype(AR.AndreasRieger:Section) < prototype(Neos.Neos:Content) {
   templatePath = 'resource://AR.AndreasRieger/Private/Templates/NodeTypes/Section.html'
-  attributes.class = 'container-fluid'
-  titleOverride = ${q(node).property('titleOverride') ? q(node).property('titleOverride') : q(node).property('title')}
+  #@context.sectionId = ${q(node).property('sectionId') ? q(node).property('sectionId') : node.identifier}
+  attributes {
+    class = 'container-fluid py-5'
+    id = ${q(node).property('sectionId') ? q(node).property('sectionId') : node.name}
+  }
+  sectionContent = Neos.Neos:ContentCollection {
+    nodePath = 'sectionContent'
+  }
 }

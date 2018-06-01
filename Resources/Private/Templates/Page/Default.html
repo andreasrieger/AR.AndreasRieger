@@ -12,13 +12,15 @@
 </head>
 <body>
 <f:section name="body">
-	<div class="container">
-		{content.main -> f:format.raw()}
-	</div>
+	{content.main -> f:format.raw()}
 	{parts.menu -> f:format.raw()}
 </f:section>
 <f:section name="bodyScripts">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="{f:uri.resource(path: 'JavaScript/bootstrap.js', package: 'AR.AndreasRieger')}"></script>
 	<script src="{f:uri.resource(path: 'JavaScript/FontAwesome/all.js', package: 'AR.AndreasRieger')}"></script>
+	<script src="{f:uri.resource(path: 'JavaScript/custom.js', package: 'AR.AndreasRieger')}"></script>
 </f:section>
 </body>
 </html>
