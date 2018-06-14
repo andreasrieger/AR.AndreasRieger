@@ -26,10 +26,6 @@ $fa-font-path: "../Fonts";
   background: rgba(238,238,238,0.8);
 }
 
-// .fa-icons a {
-//   color: $body-color;
-// }
-
 #fa-icon-xing a:hover {
   color: #b0d400;
 }
@@ -55,27 +51,19 @@ $fa-font-path: "../Fonts";
   z-index: 20;
 }
 
- /* Flip around the padding for proper display in narrow viewports */
- // .navbar-wrapper > .container {
- //   padding-right: 0;
- //   padding-left: 0;
- // }
-
- // .navbar-wrapper .navbar .container {
- //   width: auto;
- // }
-
 #specialmenu {
-   background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
 }
+
 .navbar {
  	background-image: url("../Images/logo.svg");
  	background-repeat: no-repeat;
- 	// text-indent: -999px;
  	background-size: contain;
-  // width: 112px;
 }
 
+// #specialmenu .nav-item {
+//   background-color: rgba(0, 0, 0, 0.5);
+// }
 
  /* RESPONSIVE CSS
  -------------------------------------------------- */
@@ -84,42 +72,14 @@ $fa-font-path: "../Fonts";
   .navbar-wrapper {
     margin-top: 20px;
   }
-  // .navbar-wrapper .container {
-  //   padding-right: 15px;
-  //   padding-left: 15px;
-  // }
-  // .navbar-wrapper .navbar {
-  //   padding-right: 0;
-  //   padding-left: 0;
-  // }
   .navbar-wrapper .navbar {
     border-radius: 4px;
   }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
   .navbar-wrapper .container {
     padding-right: 0;
     padding-left: 0;
   }
 }
-
- // @media (min-width: 768px) {
- //   /* Navbar positioning foo */
- //   .navbar-wrapper {
- //     margin-top: 20px;
- //   }
- //   .navbar-wrapper .container {
- //     padding-right: 15px;
- //     padding-left: 15px;
- //   }
- //   // .navbar-wrapper .navbar {
- //   //   padding-right: 0;
- //   //   padding-left: 0;
- //   // }
- //
- //   /* The navbar becomes detached from the top, so we round the corners */
- //   .navbar-wrapper .navbar {
- //     border-radius: 4px;
- //   }
- // }

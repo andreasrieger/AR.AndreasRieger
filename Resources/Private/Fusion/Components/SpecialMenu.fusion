@@ -5,9 +5,9 @@ prototype(AR.AndreasRieger:SpecialMenu) < prototype(Neos.Fusion:Template){
     collection = ${q(documentNode).find('[instanceof AR.AndreasRieger:Section][showInMenu = TRUE]').get()}
     itemRenderer = Neos.Fusion:Template {
       templatePath = 'resource://AR.AndreasRieger/Private/Templates/NodeTypes/SpecialMenu.html'
-      sectionName = 'menuItem'
+      sectionName = 'menuItemAlt'
       linktext = ${q(item).property('menuLinkText') ? q(item).property('menuLinkText') : q(item).property('title')}
       href = ${q(item).property('sectionId') ? q(item).property('sectionId') : item.name}
     }
-  }  
+  }
 }

@@ -1,20 +1,31 @@
-import 'node_modules/bootstrap';
-
 $(document).ready(function(){
 
 	// Function is setting padding-top to <body> depending on #main-navbar height.
-	$('body').css({'padding-top': (($('#specialmenu').height()) + 15 )+'px'});
-	$(window).resize(function(){
-		$('body').css({'padding-top': (($('#specialmenu').height()) + 15 )+'px'});
+	// $('body').css({'padding-top': (($('#specialmenu').height()) + 15 )+'px'});
+	// $(window).resize(function(){
+	// 	$('body').css({'padding-top': (($('#specialmenu').height()) + 15 )+'px'});
+	// });
+
+	$('.navbar-toggler').on('click', function(){
+		$('#specialmenu').removeClass('navbar-light').removeClass('border-light').removeClass('bg-light').addClass('navbar-dark bg-dark border-dark');
 	});
 
-	//Transorming a listed content in a 'card'
-	$('body div.card ul').attr('class', 'list-group list-group-flush');
-	$('body div.card li').attr('class', 'list-group-item');
-	$('body div.card p').attr('class', 'card-text');
+	// Closes the menu on click on a link (as this links jumps instead of opening another URL)
+	$('.nav-link').on('click', function(){
+		$('.navbar-collapse').collapse('hide');
+		$('#specialmenu').removeClass('navbar-dark').removeClass('border-dark').removeClass('bg-dark').addClass('navbar-light bg-light border-light');
+	});
 
-	//Transorming a table
-	$('body section table').attr('class', 'table table-striped').removeAttr('style').removeAttr('cellspacing').removeAttr('cellpadding').removeAttr('border');
-	$('body section table thead').attr('class', 'thead-light');
+	// Closes the menu on click outside the menu
+	$(document).click(function(event) {
+		if ($(event.target).parents(".navbar-collapse").length < 1) {
+			var clickover = $(event.target);
+			var _opened = $(".navbar-collapse").hasClass("show");
+			if (_opened === true && !clickover.hasClass("navbar-toggler")) {
+				$(".navbar-collapse").collapse('hide');
+				$('#specialmenu').removeClass('navbar-dark').removeClass('border-dark').removeClass('bg-dark').addClass('navbar-light bg-light border-light');
+			}
+		}
+	});
 
 });
