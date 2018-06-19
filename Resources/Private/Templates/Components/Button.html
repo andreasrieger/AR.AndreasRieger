@@ -1,0 +1,14 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+
+<div{attributes -> f:format.raw()}>
+	<f:if condition="{neos:rendering.inBackend()}">
+		<f:then>
+			<neos:contentElement.editable property="buttonLabel" class="btn btn-{buttonColor}" />
+		</f:then>
+		<f:else>
+			<button type="button" class="btn btn-info {moreSpace} {largeButton}" data-toggle="{dataToggle}" data-target="{dataTarget}">
+				{buttonLabel -> f:format.stripTags()}
+			</button>
+		</f:else>
+	</f:if>
+</div>

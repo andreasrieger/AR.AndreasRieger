@@ -1,0 +1,13 @@
+prototype(AR.AndreasRieger:ButtonToolbar) < prototype(Neos.Neos:Content) {
+  templatePath = 'resource://AR.AndreasRieger/Private/Templates/Components/ButtonToolbar.html'
+  //attributes.class.@process.nodeType >
+  @context.elementClass = ${q(node).property('justifyContent') ? 'btn-toolbar justify-content-' + q(node).property('justifyContent') + ' mb-1': 'btn-toolbar justify-content-center mb-1'}
+  buttons = Neos.Neos:ContentCollection {
+		nodePath = 'buttons'
+    attributes {
+      class = ${q(elementClass).get()}
+      role = 'toolbar'
+      aria-label = 'Toolbar with button groups'
+    }
+	}
+}

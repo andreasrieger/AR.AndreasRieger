@@ -2,12 +2,31 @@
 
 Neos:
   Neos:
-    fusion:
-      autoInclude:
-        AR.AndreasRieger: true
+    # fusion:
+    #   autoInclude:
+    #     AR.AndreasRieger: true
     nodeTypes:
       groups:
         twbs:
           position: 50
           label: 'Twitter Bootstrap Components'
           icon: 'icon-twitter-square'
+  ContentRepository:
+    contentDimensions:
+      language:
+        label: 'AR.Farmia:Main:contentDimensions.language'
+        icon: icon-language
+        default: en_US
+        defaultPreset: en_US
+        presets:
+          all: null
+          en_US:
+            label: 'English (US)'
+            values:
+              - en_US
+            uriSegment: en
+          de:
+            label: German
+            values:
+              - de
+            uriSegment: de
