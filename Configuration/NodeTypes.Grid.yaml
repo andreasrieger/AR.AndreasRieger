@@ -4,6 +4,8 @@
 'AR.AndreasRieger:Section':
   superTypes:
     'Neos.Neos:Content': TRUE
+    'AR.AndreasRieger:Appearance': true
+    'AR.AndreasRieger:Settings': true
   ui:
     label: 'Seitenabschnitt'
     icon: 'icon-bars'
