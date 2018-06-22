@@ -28,4 +28,19 @@ $(document).ready(function(){
 		}
 	});
 
+	var cookieName = 'accept_cookies';
+
+	if(document.cookie.indexOf(cookieName + '=true') > -1)	{
+		window[cookieName] = true;
+		$('#cookieconsent').collapse('hide');
+	}
+	else{
+		$('#cookieconsent').collapse('show');
+	}
+	$('#cookieconsentbutton').on('click', function(){
+		document.cookie = cookieName + '=true;path=/';
+		window[cookieName] = true;
+		$('#cookieconsent').collapse('hide');
+		// $('#cookieconsent').hide();
+	});
 });

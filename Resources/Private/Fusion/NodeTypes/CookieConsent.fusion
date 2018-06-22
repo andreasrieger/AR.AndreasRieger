@@ -1,0 +1,8 @@
+prototype(AR.AndreasRieger:CookieConsent) < prototype(Neos.Neos:Content) {
+  templatePath = 'resource://AR.AndreasRieger/Private/Templates/NodeTypes/CookieConsent.html'
+  #@process.convertUris = Neos.Neos:ConvertUris
+  attributes {
+    class = 'navbar fixed-bottom navbar-dark bg-dark collapse show'
+    id = 'cookieconsent'
+  }
+}

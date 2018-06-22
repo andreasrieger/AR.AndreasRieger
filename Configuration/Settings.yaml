@@ -14,14 +14,14 @@ Neos:
   ContentRepository:
     contentDimensions:
       language:
-        label: 'AR.Farmia:Main:contentDimensions.language'
+        label: 'AR.AndreasRieger:Main:contentDimensions.language'
         icon: icon-language
         default: en_US
         defaultPreset: en_US
         presets:
           all: null
           en_US:
-            label: 'English (US)'
+            label: 'English'
             values:
               - en_US
             uriSegment: en

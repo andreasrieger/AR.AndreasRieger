@@ -1,0 +1,12 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace form=Neos\Form\ViewHelpers}
+
+<nav{attributes -> f:format.raw()}>
+	<span class="navbar-text">
+		{infoText -> f:format.raw()}
+		<neos:link.node node="{pageReference}" section="{textAnchor}">
+			{linktext -> f:format.raw()}
+		</neos:link.node>.
+	</span>
+	<f:form.button type="button" id="cookieconsentbutton" class="btn btn-info {moreSpace} {largeButton}" additionalAttributes="{role: 'button'}" data="{toggle: 'collapse', target: '#cookieconsent'}">{buttonLabel -> f:format.raw()}</f:form.button>
+</nav>
