@@ -41,6 +41,5 @@ $(document).ready(function(){
 		document.cookie = cookieName + '=true;path=/';
 		window[cookieName] = true;
 		$('#cookieconsent').collapse('hide');
-		// $('#cookieconsent').hide();
 	});
 });
