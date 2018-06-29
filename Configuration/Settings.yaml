@@ -2,9 +2,9 @@
 
 Neos:
   Neos:
-    # fusion:
-    #   autoInclude:
-    #     AR.AndreasRieger: true
+    fusion:
+      autoInclude:
+        AR.TwbsComponents: true
     nodeTypes:
       groups:
         twbs:
