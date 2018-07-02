@@ -1,4 +1,5 @@
----
+# Default page configuration
+#
 'AR.AndreasRieger:Page':
   superTypes:
     'Neos.Neos:Document': TRUE
@@ -9,6 +10,8 @@
     main:
       type: 'Neos.Neos:ContentCollection'
 
+# Homepage configuration
+#
 'AR.AndreasRieger:Homepage':
   superTypes:
     'AR.AndreasRieger:Page': TRUE
