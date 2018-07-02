@@ -13,20 +13,18 @@ Neos:
           icon: 'icon-twitter-square'
   ContentRepository:
     contentDimensions:
-      language:
-        label: 'AR.AndreasRieger:Main:contentDimensions.language'
-        icon: icon-language
-        default: en_US
-        defaultPreset: en_US
+      'language':
+        label: 'Language'
+        icon: 'icon-language'
+        default: 'en'
+        defaultPreset: 'en'
         presets:
-          all: null
-          en_US:
+          # all: null
+          'en':
             label: 'English'
-            values:
-              - en_US
-            uriSegment: en
-          de:
-            label: German
-            values:
-              - de
-            uriSegment: de
+            values: ['en']
+            uriSegment: 'en'
+          'de':
+            label: 'Deutsch'
+            values: ['de', 'en']
+            uriSegment: 'de'
