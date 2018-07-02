@@ -19,7 +19,7 @@ Neos:
         default: 'en'
         defaultPreset: 'en'
         presets:
-          # all: null
+          all: null
           'en':
             label: 'English'
             values: ['en']
