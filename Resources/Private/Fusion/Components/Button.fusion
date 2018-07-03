@@ -1,7 +1,0 @@
-prototype(AR.AndreasRieger:Button) < prototype(Neos.Neos:Content) {
-  templatePath = 'resource://AR.AndreasRieger/Private/Templates/Components/Button.html'
-  @process.convertUris = Neos.Neos:ConvertUris
-  attributes.class = ${'btn ' + q(node).property('buttonColor')}
-  pageReference = ${q(node).property('pageReference') ? q(node).property('pageReference') : 'javascript:void(0)'}
-  largeButton = ${q(node).property('largeButton') ? 'btn-lg' : ''}
-}

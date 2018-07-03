@@ -5,10 +5,7 @@
 # works only here!
 namespace: AR=AR.AndreasRieger
 
-include: Components/**/*
-include: Documents/**/*
 include: NodeTypes/**/*
-include: Grid/**/*
 
 prototype(AR:DefaultPage) < prototype(Neos.Neos:Page) {
     head {

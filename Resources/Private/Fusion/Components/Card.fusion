@@ -1,4 +1,0 @@
-prototype(AR.AndreasRieger:Card) < prototype(Neos.Neos:Content) {
-	templatePath = 'resource://AR.AndreasRieger/Private/Templates/NodeTypes/Card.html'
-  attributes.class = 'card'
-}
