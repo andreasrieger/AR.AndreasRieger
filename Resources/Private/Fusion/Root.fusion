@@ -41,10 +41,11 @@ prototype(AR:DefaultPage) < prototype(Neos.Neos:Page) {
           menu = Neos.Neos:Menu
           specialMenu = AR.TwbsComponents:Navbar {
             placement >
-            renderer {
-              attributes.id = 'mainmenu'
-              content.renderer.navbarBrand.content >
+            attributes {
+              class.navBorder = 'border'
+              id = 'mainmenu'
             }
+            content.renderer.navbarBrand.content >
           }
         }
 
