@@ -9,6 +9,10 @@
   childNodes:
     main:
       type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': FALSE
+          'AR.TwbsComponents:Container': TRUE
 
 # Homepage configuration
 #
@@ -25,7 +29,6 @@
       constraints:
         nodeTypes:
           '*': FALSE
-          'AR.AndreasRieger:Jumbotron': TRUE
           'AR.TwbsComponents:Jumbotron': TRUE
   constraints:
     nodeTypes:

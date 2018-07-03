@@ -39,7 +39,10 @@ prototype(AR:DefaultPage) < prototype(Neos.Neos:Page) {
         sectionName = 'body'
         parts {
             menu = Neos.Neos:Menu
-            specialMenu = AR.TwbsComponents:Navbar
+            specialMenu = AR.TwbsComponents:Navbar {
+              placement >
+              renderer.content.renderer.navbarBrand >
+            }
         }
 
         javascripts.site = Neos.Fusion:Template {
