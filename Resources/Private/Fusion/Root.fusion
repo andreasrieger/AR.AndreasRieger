@@ -38,11 +38,14 @@ prototype(AR:DefaultPage) < prototype(Neos.Neos:Page) {
         templatePath = 'resource://AR.AndreasRieger/Private/Templates/Page/Default.html'
         sectionName = 'body'
         parts {
-            menu = Neos.Neos:Menu
-            specialMenu = AR.TwbsComponents:Navbar {
-              placement >
-              renderer.content.renderer.navbarBrand >
+          menu = Neos.Neos:Menu
+          specialMenu = AR.TwbsComponents:Navbar {
+            placement >
+            renderer {
+              attributes.id = 'mainmenu'
+              content.renderer.navbarBrand.content >
             }
+          }
         }
 
         javascripts.site = Neos.Fusion:Template {

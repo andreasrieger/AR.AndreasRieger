@@ -7,13 +7,17 @@ $(document).ready(function(){
 	// });
 
 	$('.navbar-toggler').on('click', function(){
-		$('#specialmenu').removeClass('navbar-light').removeClass('border-light').removeClass('bg-light').addClass('navbar-dark bg-dark border-dark');
+		if ($(".navbar-collapse").hasClass("show")) {
+			$('#mainmenu').removeClass('navbar-dark').removeClass('border-dark').removeClass('bg-dark').addClass('navbar-light bg-light border-light');
+		} else {
+			$('#mainmenu').removeClass('navbar-light').removeClass('border-light').removeClass('bg-light').addClass('navbar-dark bg-dark border-dark');
+		}
 	});
 
 	// Closes the menu on click on a link (as this links jumps instead of opening another URL)
 	$('.nav-link').on('click', function(){
 		$('.navbar-collapse').collapse('hide');
-		$('#specialmenu').removeClass('navbar-dark').removeClass('border-dark').removeClass('bg-dark').addClass('navbar-light bg-light border-light');
+		$('#mainmenu').removeClass('navbar-dark').removeClass('border-dark').removeClass('bg-dark').addClass('navbar-light bg-light border-light');
 	});
 
 	// Closes the menu on click outside the menu
@@ -23,7 +27,7 @@ $(document).ready(function(){
 			var _opened = $(".navbar-collapse").hasClass("show");
 			if (_opened === true && !clickover.hasClass("navbar-toggler")) {
 				$(".navbar-collapse").collapse('hide');
-				$('#specialmenu').removeClass('navbar-dark').removeClass('border-dark').removeClass('bg-dark').addClass('navbar-light bg-light border-light');
+				$('#mainmenu').removeClass('navbar-dark').removeClass('border-dark').removeClass('bg-dark').addClass('navbar-light bg-light border-light');
 			}
 		}
 	});
