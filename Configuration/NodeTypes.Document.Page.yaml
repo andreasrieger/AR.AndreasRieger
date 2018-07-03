@@ -26,6 +26,7 @@
         nodeTypes:
           '*': FALSE
           'AR.AndreasRieger:Jumbotron': TRUE
+          'AR.TwbsComponents:Jumbotron': TRUE
   constraints:
     nodeTypes:
       'AR.AndreasRieger:Homepage': FALSE
