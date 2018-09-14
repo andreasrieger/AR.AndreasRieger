@@ -19,12 +19,12 @@ Neos:
         default: 'en_US'
         defaultPreset: 'en_US'
         presets:
-          all: null
+          'all': ~
           'en_US':
             label: 'English'
             values: ['en_US']
-            uriSegment: 'en'
-          'de':
+            uriSegment: ''
+          'de_DE':
             label: 'Deutsch'
-            values: ['de', 'en']
+            values: ['de_DE', 'en_US']
             uriSegment: 'de'

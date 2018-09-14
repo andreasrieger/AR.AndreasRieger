@@ -18,16 +18,21 @@ prototype(AR:DefaultPage) < prototype(Neos.Neos:Page) {
             templatePath = 'resource://AR.AndreasRieger/Private/Templates/Page/Default.html'
             sectionName = 'headScripts'
         }
-        /* metadata = Neos.Fusion:Template {
-            templatePath = 'resource://AR.AndreasRieger/Private/Fusion/Documents/Page/Page.Document.html'
-            sectionName = 'metadata'
-        } */
+
         viewportMetaTag = Neos.Fusion:Tag {
           @position = 'start 20'
           tagName = 'meta'
           attributes {
             name = 'viewport'
             content = 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no'
+          }
+        }
+        metaDescription = Neos.Fusion:Tag {
+          @position = 'start 30'
+          tagName = 'meta'
+          attributes {
+            name = 'description'
+            content = ${q(node).property('metaDescription')}
           }
         }
     }
