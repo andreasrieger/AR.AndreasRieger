@@ -16,15 +16,15 @@ Neos:
       'language':
         label: 'Language'
         icon: 'icon-language'
-        default: 'en_US'
-        defaultPreset: 'en_US'
+        default: 'en'
+        defaultPreset: 'en'
         presets:
           'all': ~
-          'en_US':
+          'en':
             label: 'English'
-            values: ['en_US']
+            values: ['en']
             uriSegment: ''
-          'de_DE':
+          'de':
             label: 'Deutsch'
-            values: ['de_DE', 'en_US']
+            values: ['de']
             uriSegment: 'de'
