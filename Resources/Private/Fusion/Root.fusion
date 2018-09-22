@@ -27,6 +27,12 @@ prototype(AR:DefaultPage) < prototype(Neos.Neos:Page) {
             content = 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no'
           }
         }
+
+        titleTag = Neos.Fusion:Tag {
+          tagName = 'title'
+          content = ${q(node).property('titleOverride') ? q(node).property('titleOverride') : q(node).property('title')}
+        }
+
         metaDescription = Neos.Fusion:Tag {
           @position = 'start 30'
           tagName = 'meta'
